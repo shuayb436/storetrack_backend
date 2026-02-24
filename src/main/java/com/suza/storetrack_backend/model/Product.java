@@ -46,7 +46,7 @@ public class Product {
 
     // reverse r/ship
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<StockHistory> stockHistories = new ArrayList<>();
+    private List<StockHistory> stockHistories = new ArrayList<>();//product analist inaconsist dailysales
 
 }
 

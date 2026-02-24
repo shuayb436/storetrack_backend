@@ -23,19 +23,3 @@ public class WebConfig {
         };
     }
 }
-
-// @Configuration
-// public class WebConfig {
-//     @Bean
-//     public WebMvcConfigurer corsConfigurer(){
-//         return new WebMvcConfigurer() {
-//             @Override
-//             public void addCorsMappings(CorsRegistry registry) {
-//                 registry.addMapping("/api/**")
-//                         .allowedOrigins("http://localhost:5174") // your React app URL
-//                         .allowedMethods("GET", "POST", "PUT", "DELETE");
-//             }
-//         };
-        
-//     }
-// }

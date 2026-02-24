@@ -25,6 +25,7 @@ public class ProductService {
         
         private ProductRepository productRepository;
         private ModelMapper modelMapper; 
+        
         private StockHistoryRepository stockHistoryRepository;
        
 

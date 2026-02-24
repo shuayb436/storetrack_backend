@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
 
 @RestController //inamwambia springboot hii class n y Cntrl na kaz yke inahusiana n kucreate api inahusian n product
-@RequestMapping("/api/v1/storetrack/product")  //mwanzo wa api inaanza ivi
+@RequestMapping("/api/v1/storetrack/product")  //mwanzo wa api inaanza ivi akianza kutuma data 
 public class ProductController {
 
     @Autowired
