@@ -13,9 +13,13 @@ public class WebConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
+                String allowedOrigins = System.getenv("ALLOWED_ORIGINS");
+                String[] origins = (allowedOrigins != null && !allowedOrigins.isBlank())
+                        ? allowedOrigins.split(",")
+                        : new String[]{"http://localhost:5173"};
+
                 registry.addMapping("/api/**")
-                        .allowedOrigins("http://localhost:5173") // React port
-                        // .allowedOrigins("http://localhost:5174") // React port
+                        .allowedOrigins(origins)
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
